@@ -56,8 +56,36 @@ class App extends React.Component {
     if (this.state.questionId < quizQuestions.length) {
         setTimeout(() => this.setNextQuestion(), 300);
       } else {
-
+          setTimeout(() => this.setResults(this.getResults()), 300);
       }
+  }
+  // this code may be extraneous due to the nature of the quiz
+  getResults() {
+    const answersCount = this.state.answersCount;
+    const answersCountKeys = Object.keys(answersCount);
+    const answersCountValues = answersCountKeys.map((key) => answersCount[key]);
+    const maxAnswerCount = Math.max.apply(null, answersCountValues);
+    
+    return answersCountKeys.filter((key) => answersCount[key] === maxAnswerCount);
+  }
+  // this code as well could be extra
+  setResults(result) {
+    if (result.length === 1){
+      this.setState({ result: result[0] });
+    } else {
+      this.setState({ result: 'Undetermined' });
+    }
+  }
+  setNextQuestion(){
+    const counter = this.state.counter +1;
+    const questionId = this.state.questionId +1;
+    this.setState({
+      counter: counter,
+      questionId: questionId,
+      question: quizQuestions[counter].question,
+      answerOptions: quizQuestions[counter].answers,
+      answer: ''
+    });
   }
   render (){
     return(
