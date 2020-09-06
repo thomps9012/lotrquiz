@@ -2,13 +2,16 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Question from './components/Question';
+import Quiz from './components/Quiz';
+import AnswerOption from './components/AnswerOption';
 import { render } from '@testing-library/react';
 import quizQuestions from './api/quizQuestions';
+import Result from './components/Result';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-  
+
     this.state = {
       counter: 0,
       questionId: 1,
@@ -54,10 +57,10 @@ class App extends React.Component {
   handleAnswerSelected(event) {
     this.setUserAnswer(event.currentTarget.value);
     if (this.state.questionId < quizQuestions.length) {
-        setTimeout(() => this.setNextQuestion(), 300);
-      } else {
-          setTimeout(() => this.setResults(this.getResults()), 300);
-      }
+      setTimeout(() => this.setNextQuestion(), 300);
+    } else {
+      setTimeout(() => this.setResults(this.getResults()), 300);
+    }
   }
   // this code may be extraneous due to the nature of the quiz
   getResults() {
@@ -65,20 +68,20 @@ class App extends React.Component {
     const answersCountKeys = Object.keys(answersCount);
     const answersCountValues = answersCountKeys.map((key) => answersCount[key]);
     const maxAnswerCount = Math.max.apply(null, answersCountValues);
-    
+
     return answersCountKeys.filter((key) => answersCount[key] === maxAnswerCount);
   }
   // this code as well could be extra
   setResults(result) {
-    if (result.length === 1){
+    if (result.length === 1) {
       this.setState({ result: result[0] });
     } else {
       this.setState({ result: 'Undetermined' });
     }
   }
-  setNextQuestion(){
-    const counter = this.state.counter +1;
-    const questionId = this.state.questionId +1;
+  setNextQuestion() {
+    const counter = this.state.counter + 1;
+    const questionId = this.state.questionId + 1;
     this.setState({
       counter: counter,
       questionId: questionId,
@@ -87,13 +90,8 @@ class App extends React.Component {
       answer: ''
     });
   }
-  render (){
-    return(
-      <div className="App">
-      <div className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h2>React Quiz</h2>
-      </div>
+  renderQuiz() {
+    return (
       <Quiz
         answer={this.state.answer}
         answerOptions={this.state.answerOptions}
@@ -102,7 +100,24 @@ class App extends React.Component {
         questionTotal={quizQuestions.length}
         onAnswerSelected={this.handleAnswerSelected}
       />
-    </div>
+    );
+  }
+  renderResult() {
+    return(
+      <Result quizResult={this.state.result} />
+    );
+  }
+  render() {
+    return (
+      <div className="App">
+        <div className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h2>LoTR React Quiz</h2>
+        </div>
+        {this.state.result ? this.renderResult() : this.renderQuiz()}
+      </div>
     )
+  }
 }
-}
+
+export default App;

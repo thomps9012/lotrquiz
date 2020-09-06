@@ -9,7 +9,7 @@ function Result(props) {
     );
 }
 
-Result.PropTypes = {
+Result.propTypes = {
     quizResult: PropTypes.string.isRequired,
 };
 
