@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from './LoTRLogo.svg';
 import './App.css';
 import Quiz from './components/Quiz';
 import quizQuestions from './api/quizQuestions';
@@ -108,8 +108,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="App-header">
+          <br></br>
           <img src={logo} className="App-logo" alt="logo"/>
-          <h2>LoTR Character Quiz</h2>
+          <h2>Character Quiz</h2>
         </div>
         {this.state.result ? this.renderResult() : this.renderQuiz()}
       </div>
