@@ -1,10 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Question from './components/Question';
 import Quiz from './components/Quiz';
-import AnswerOption from './components/AnswerOption';
-import { render } from '@testing-library/react';
 import quizQuestions from './api/quizQuestions';
 import Result from './components/Result';
 
