@@ -1,65 +1,127 @@
 var quizQuestions = [
-    { question: "In 'The Fellowship of the Ring', what is the name of the ferry the hobbits use to escape the Black Riders?",
+    {
+        question: "How would you rather celebrate with friends?",
         answers: [
-            "Bucklebury Ferry",
-            "Midnight Rider",
-            "Our Lady o' the River"
+            {
+                type: "Gandalf",
+                content: "Shooting off some fireworks"
+            },
+            {
+                type: "Frodo",
+                content: "Going for a hike"
+            },
+            {
+                type: "Aragon",
+                content: "Drinking in an inn"
+            },
+            {
+                type: "Gimli",
+                content: "Throwing axes"
+            },
+            {
+                type: "Leogolas",
+                content: "Going to an archery range"
+            }
         ]
     },
-    { question: "Where was the entire trilogy of the Lord of the Rings filmed?",
+    {
+        question: "You would describe yourself as mostly?",
         answers: [
-            "New Zealand",
-            "Australia",
-            "Greenland"
+            {
+                type: "Gandalf",
+                content: "Wise and mild mannered"
+            },
+            {
+                type: "Frodo",
+                content: "Jumpy and a bit whiny"
+            },
+            {
+                type: "Aragon",
+                content: "Morose and stand off ish"
+            },
+            {
+                type: "Gimli",
+                content: "Jovial, though a bit rough around the edges"
+            },
+            {
+                type: "Leogolas",
+                content: "Haughty and elegant"
+            }
         ]
     },
-    { question: "What mythical creatures are constantly hunting Frodo and his merry crew?",
+    {
+        question: "Would you rather work in?",
         answers: [
-            "Nazgul",
-            "Bombadil",
-            "Rohirrim"
+            {
+                type: "Gandalf",
+                content: "The wilderness outdoors"
+            },
+            {
+                type: "Frodo",
+                content: "From home"
+            },
+            {
+                type: "Aragon",
+                content: "The office"
+            },
+            {
+                type: "Gimli",
+                content: "In a mine"
+            },
+            {
+                type: "Leogolas",
+                content: "Work? What's that?"
+            }
         ]
     },
-    { question: "What book is the prequel to the LoTR series?",
+    {
+        question: "In your spare time you'd like to?",
         answers: [
-            "Silmarillion",
-            "Two Towers",
-            "Prisoner of Azkaban"
+            {
+                type: "Gandalf",
+                content: "Smoke and meditate on the meaning of life"
+            },
+            {
+                type: "Frodo",
+                content: "Cook a meal for some close friends"
+            },
+            {
+                type: "Aragon",
+                content: "Ride a horse around the kingdom grounds"
+            },
+            {
+                type: "Gimli",
+                content: "Count your gold"
+            },
+            {
+                type: "Leogolas",
+                content: "Patrol the borders to keep out the orc scum"
+            }
         ]
     },
-    { question: "What is the name of the character who returns from the dead and rides into battle at Helms Deep?",
+    {
+        question: "Your main mode of transporation?",
         answers: [
-            "Gandalf the Grey",
-            "Gandalf the White",
-            "Saruman"
-        ]
-    },
-    { question: "In Mordor, what kind of food does Frodo say he can't remember the taste of?",
-        answers: [
-            "Strawberries",
-            "Potatoes",
-            "Raspberries"
-        ]
-    },
-    { question: "Where does the Fellowship of the Ring break up?",
-        answers: [
-            "Amon Hen",
-            "Anduin",
-            "Gondor"
-        ]
-    },
-    { question: "Who became King of Rohan after Theoden met his demise in battle?",
-        answers: [
-            "Eomer",
-            "Boromir",
-            "Aragon"
-        ]
-    },
-    { question: "How many wizards are there in Middle Earth?",
-        answers: [
-            "5",
-            "3",
-            "7"
+            {
+                type: "Gandalf",
+                content: "Horse and sometimes wagon"
+            },
+            {
+                type: "Frodo",
+                content: "Your two feet"
+            },
+            {
+                type: "Aragon",
+                content: "Horse"
+            },
+            {
+                type: "Gimli",
+                content: "Mountain ram"
+            },
+            {
+                type: "Leogolas",
+                content: "Gliding across the floor"
+            }
         ]
     }
   ];
