@@ -54,7 +54,7 @@ var quizQuestions = [
         answers: [
             {
                 type: "Gandalf",
-                content: "The wilderness outdoors"
+                content: "The wild outdoors"
             },
             {
                 type: "Frodo",
