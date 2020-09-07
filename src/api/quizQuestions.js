@@ -12,7 +12,7 @@ var quizQuestions = [
             },
             {
                 type: "Aragon",
-                content: "Drinking in an inn"
+                content: "Drinking at an inn"
             },
             {
                 type: "Gimli",

@@ -59,7 +59,6 @@ class App extends React.Component {
       setTimeout(() => this.setResults(this.getResults()), 300);
     }
   }
-  // this code may be extraneous due to the nature of the quiz
   getResults() {
     const answersCount = this.state.answersCount;
     const answersCountKeys = Object.keys(answersCount);
@@ -68,7 +67,6 @@ class App extends React.Component {
 
     return answersCountKeys.filter((key) => answersCount[key] === maxAnswerCount);
   }
-  // this code as well could be extra
   setResults(result) {
     if (result.length === 1) {
       this.setState({ result: result[0] });
