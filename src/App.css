@@ -27,9 +27,10 @@
   font-family:'Grenze Gotisch', cursive;
 }
 
-.App-link {
-  color: #61dafb;
+.App, .container {
+  background-color: #282c34;
 }
+
 
 @keyframes App-logo-spin {
   from {
